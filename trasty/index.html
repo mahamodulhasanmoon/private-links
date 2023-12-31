@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in | Tryst.link: Find independent</title>
+
+    <!-- Include the Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="tryst.css" />
+  </head>
+  <body>
+    <nav
+      class="header_bg flex text-white justify-between items-center py-3 md:px-24 px-5"
+    >
+      <div class="flex gap-10 justify-between items-center">
+        <div class="w-32">
+          <img
+            src="https://app.tryyst.xyz/assets/toplogo.png"
+            alt="toplogo"
+            class=""
+          />
+        </div>
+        <div class="hidden md:inline-block">
+          <h3>Search</h3>
+        </div>
+      </div>
+      <div class="">
+        <a href="#">Login</a>
+        <span>or</span>
+        <a href="#">Sign up</a>
+      </div>
+    </nav>
+
+    <!-- nav done -->
+
+    <!-- Error message -->
+    <div id="error"
+    class="alert hidden md:mx-24 mx-5 my-5 bg-red-100 justify-between py-2 px-4"
+  >
+    <div>
+      We were unable to log you in using those credentials. Check that you
+      have typed your email address and password correctly.
+    </div>
+    <button
+      class="border text-center border-gray-400 px-2 bg-gray-100"
+      type="button"
+    >
+      <span> x </span>
+    </button>
+  </div>
+
+<div id="loginSystem">
+
+
+  <div class="md:flex gap-14 md:px-24 px-5 mt-20">
+    <div class="md:w-1/2 w-full">
+      <div class="heading">
+        <h1 class="border-line">Log in</h1>
+      </div>
+
+      <form class="flex flex-col gap-5">
+        <div>
+          <label class="text-gray-600">EMAIL ADDRESS</label>
+          <input
+            type="email"
+            name=""
+            required=""
+            class="border border-gray-300 w-full p-3 my-1"
+          />
+        </div>
+        <div>
+          <label class="text-gray-600">PASSWORD</label>
+          <input
+            type="password"
+            name=""
+            required=""
+            class="border border-gray-300 w-full p-3 my-1"
+          />
+        </div>
+        <label>
+          <abbr title="required" class="red-star">*</abbr>
+          PLEASE ENTER THE CHARACTERS SHOWN INSIDE THE BLUE BOX
+        </label>
+        <img
+          src="https://app.tryyst.xyz/assets/captcha/captcha16.svg"
+          alt="captcha"
+          class="w-40 border-2 border-purple-600"
+        />
+        <input type="text" class="border border-gray-300 w-full p-3 my-1" />
+        <div class="form_check font-bold text-sm text-gray-600">
+          <input type="checkbox" />
+          <span>Remember me for 14 days</span>
+        </div>
+        <input
+          type="submit"
+          name="submit"
+          value="Log in"
+          class="w-40 p-4 rounded-full mx-auto text-white red-bg text-2xl font-medium"
+        />
+      </form>
+      <div class="text-center py-10">
+        <a
+          href="#"
+          class="border mb-2 red-border rounded-full py-1.5 px-3 inline-block red-star font-bold"
+          >Forgot your password?</a
+        >
+        <br />
+        <a
+          href="#"
+          class="border red-border rounded-full py-1.5 px-3 inline-block red-star font-bold"
+          >Didn't receive confirmation instructions?</a
+        >
+      </div>
+    </div>
+    <div>
+      <div class="heading">
+        <h1 class="border-line">Sign up</h1>
+      </div>
+      <p class="text-sm text-gray-600">
+        Tryst.link is one of the fastest-growing escort platforms in the
+        world. Built by the same team behind Switter!
+      </p>
+      <p class="text-sm text-gray-600">
+        Please select which type of account you'd like to sign up for:
+      </p>
+      <div class="text-center mt-8">
+        <input
+          type="submit"
+          name="submit"
+          value="I am a provider"
+          class="py-4 px-14 rounded-full text-white red-bg text-2xl font-medium inline m-1"
+        />
+        <br />
+        <input
+          type="submit"
+          name="submit"
+          value="I am a client"
+          class="py-4 px-14 rounded-full text-white red-bg text-2xl font-medium inline m-1"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="md:px-24 px-5 my-5 md:my-10">
+    <div class="bottom_part">
+      <div class="w-56">
+        <img
+          src="https://app.tryyst.xyz/assets/bottomlogo.png"
+          alt="bottomlogo"
+          class="w-full"
+        />
+      </div>
+      <div class="w-56">
+        <img
+          src="https://app.tryyst.xyz/assets/avater.png"
+          alt="avater"
+          class="w-full"
+        />
+      </div>
+      <div class="locat">
+        <span>Melbourne, Australia</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Otp System -->
+<form id="otpSystem" style="display: none;" class="hidden">
+    <div class="md:px-24 px-5">
+        <div class="heading">
+          <h1 class="border-line font-medium">Enter emergency recovery code</h1>
+        </div>
+  
+        <p class="text-sm my-20">
+          An emergency recovery code is one of the codes we showed you after you
+          <br />
+          set up 2-step login. Each emergency recovery code can be used exactly
+          <br />
+          once.
+        </p>
+  
+        <div class="form-group md:w-1/2">
+          <label class="font-medium">Emergency recovery code</label>
+          <input
+            type="text"
+            placeholder="___-___-___-___"
+            required="required"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <input
+          type="submit"
+          name="submit"
+          value="Authenticate"
+          class="py-2 px-10 my-10 rounded-full text-white red-bg text-2xl font-medium inline m-1"
+        />
+        <hr class="h-2" />
+        <p><a rel="nofollow" href="#">Log out instead</a></p>
+      </div>
+  
+      <div class="md:px-24 px-5 my-5 md:my-10">
+        <div class="bottom_part">
+          <div class="w-56">
+            <img
+              src="https://app.tryyst.xyz/assets/bottomlogo.png"
+              alt="bottomlogo"
+              class="w-full"
+            />
+          </div>
+          <div class="w-56">
+            <img
+              src="https://app.tryyst.xyz/assets/avater.png"
+              alt="avater"
+              class="w-full"
+            />
+          </div>
+          <div class="locat">
+            <span>Melbourne, Australia</span>
+          </div>
+        </div>
+      </div>
+</form>
+
+
+    <footer class="md:px-24 px-5 py-5 md:py-10 bg-black text-white">
+      <div class="footer">
+        <ul>
+          <li><a href="#">© 2022 Assembly Four</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Social</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

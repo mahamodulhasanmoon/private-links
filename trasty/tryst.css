@@ -1,0 +1,62 @@
+/* tryst page */
+.header_bg {
+    background-color: #1b1f29;
+  }
+  .heading {
+    position: relative;
+    margin-bottom: 1.8em;
+  }
+  
+  .heading h1 {
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    color: #1b1f29;
+    font-size: 41px;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 5px;
+  }
+  
+  .border-line:after {
+    content: "";
+    background-color: #d7282f;
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    text-align: center;
+    bottom: -0.1em;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+    content: "";
+    border-radius: 3px;
+    border-bottom: 1px white;
+  }
+  
+  .red-star {
+    color: #d7282f;
+  }
+  .red-bg {
+    background: #f74356;
+  }
+  .red-border {
+    border: 2px solid #f74356;
+  }
+  .red-border:hover {
+    background: #f74356;
+    color: white;
+  }
+  .red-bg:hover {
+    background: #cf3245;
+  }
+  .footer ul li a {
+    color: #fff;
+    border-bottom: 1px solid #d7282f;
+    line-height: 1.5em;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .alert {
+    color: #8c0f14;
+  }
+  

