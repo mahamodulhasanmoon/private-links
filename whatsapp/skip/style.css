@@ -1,0 +1,86 @@
+html body * {
+    font-family: open sans, helvetica neue, helvetica, arial, sans-serif !important;
+    outline: none;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cc-cookies {
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0.5em 5%;
+    background: #565656;
+    background: rgba(86, 86, 86, 0.95);
+    color: #fff;
+    font-size: 13px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+    z-index: 99999;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .cc-cookies a.cc-cookie-accept {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: #7daf3b;
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+  }
+  
+  .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5em;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cc-cookies a.cc-cookie-accept {
+      display: block;
+      margin: 1em 0;
+    }
+  }
+  h3 {
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+  }
+  .red {
+    background: #cf3245;
+  }
+  .sky {
+    background: #2ba6cb;
+  }
+  .purpal {
+    color: #990033;
+  }
+  
